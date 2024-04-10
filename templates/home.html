@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% load static %}
+{% comment %} {% load humanize %} {% endcomment %}
+
+{% block title %}HOME{% endblock %}
+
+{% block content %} 
+
+
+
+<main class="container py-5">
+	<section class="card content">
+		<h6 class="display-1 card-title text-center">RISTO by ORDERED</h6>
+		<hr>
+		<div class="row" data-masonry='{"percentPosition": true }'>
+				<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="card">
+								<img class="bd-placeholder-img card-img-top" width="100%" height="200"  src="https://res.cloudinary.com/dtcskupwr/image/upload/v1665156318/surfpichi_z810fp.jpg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text></img>
+								<div class="card-body">
+										{% comment %} {% if user.is_authenticated %}
+										<p class="card-text"><strong>
+												Bienvenido {{user.username|upper}} a tu comunidad regional!!!
+										</strong></p>
+										{% else%} {% endcomment %}
+										<h5 class="card-title">Nuestros orígenes</h5>
+										<p class="card-text"> 
+												{% comment %} <a class="btn btn-primary" href="{% url 'signin'%}"> Ingresa </a> {% endcomment %}
+										</p>
+										{% comment %} {% endif %} {% endcomment %}
+								</div>
+						</div>
+				</div>
+				
+				<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="card p-3">
+								<figure class="p-3 mb-0">
+										<blockquote class="blockquote">
+												<p>Perú</p>
+										</blockquote>
+										{% comment %} {% if user.is_authenticated %}
+										{% else%}
+										<figcaption class="blockquote-footer mb-0 text-muted">
+												<a class="btn btn-primary" href="{% url 'signup'%}"> Registrate </a>
+										</figcaption>
+										{% endif %} {% endcomment %}
+								</figure>
+						</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="card">
+								<img class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" src="https://res.cloudinary.com/dtcskupwr/image/upload/v1663793216/cld-sample-5.jpg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text></img>
+								<div class="card-body">
+										<h5 class="card-title">Contáctanos!!</h5>
+										<p class="card-text">
+												{% comment %} <a class="btn btn-primary" href="{% url 'contactar'%}"> Invita </a> {% endcomment %}
+										</p>
+										<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+						</div>
+				</div>
+				
+				<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="card text-bg-primary text-center p-3">
+								<figure class="mb-0">
+										<blockquote class="blockquote">
+												<a class="btn btn-danger btn-block active " href="{% url 'App01Menus:Menu'%}" role="button"> Ver Menu </a>
+										</blockquote>
+										{% comment %} {% if user.is_authenticated %}
+												<p class="card-text"></p>
+														<a class="btn btn-primary btn-block active " href="{% url 'publica'%}" role="button"> ⚽ 🎃  🎪  🦺  👠  🎯 </a>
+												</p>
+										{% endif %} {% endcomment %}
+								</figure>
+						</div>
+				</div>
+				
+				<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="card text-center">
+								<div class="card-body">
+										{% comment %} {% if user.is_authenticated %}
+												<a class="btn btn-xl " href="{% url 'busca'%}" role="button">
+														<h5 class="card-title">Aquí encontrarás de todo! 🔎  </h5>
+												</a>
+										{% endif %} {% endcomment %}
+								</div>
+						</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="card">
+								<img class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" src="https://res.cloudinary.com/dtcskupwr/image/upload/v1663793215/cld-sample-3.jpg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text></img>
+						</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="card p-3 text-end">
+								<figure class="mb-0">
+										<blockquote class="blockquote">
+												<p> Artesanos de Machalí </p>
+										</blockquote>
+										<figcaption class="blockquote-footer mb-0 text-muted">
+												Someone famous in <cite title="Source Title">Source Title</cite>
+										</figcaption>
+								</figure>
+						</div>
+				</div>
+
+				<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="card">
+								<div class="card-body">
+										<h5 class="card-title">Card title</h5>
+										<p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+										<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+								</div>
+						</div>
+				</div>
+
+		</div>
+	</section>
+</main>
+
+
+{% endblock content %} 
