@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'Risto.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost:5432/Risto',
+        default='postgresql://postgres:postgres@localhost:10000/RISTORENDER',
         conn_max_age=600    
     )
 }
