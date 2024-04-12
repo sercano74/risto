@@ -23,7 +23,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home, name='home'),
-    path('RISTO/',include('App01Menus.urls', namespace='RISTO') )
+    path('risto/',include('App01Menus.urls', namespace='risto') )
 ]
 
 if settings.DEBUG:

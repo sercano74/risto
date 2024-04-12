@@ -38,9 +38,9 @@
           </div>
 
           <div familia class="col mt-3">
-            <label for="familia" class="form-label">Familia - Subfamilia</label>
+            <label for="familia" class="form-label">Familia</label>
             <div class="input-group">
-              <input  value='{{producto.subflia.familia.name}} - {{producto.subflia.name}}' type="text" class="form-control" id="familia" name="familia" disabled >
+              <input  value='{{producto.familia.name}}' type="text" class="form-control" id="familia" name="familia" disabled >
               
               <!-- Button trigger modal -->
                 <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModalUpdate{{producto.id}}" title="Editar familia de producto ">
@@ -49,7 +49,7 @@
             </div>
           </div>
 
-          <div status class="col mt-3">
+          {% comment %} <div status class="col mt-3">
             <label for="bin" class="form-label">Estado</label>
             <select class="form-control" name="status" id="status" required>
               <option value="{{producto.status}}" selected > {{producto.status}} - {{producto.get_status_display}} </option>
@@ -61,22 +61,26 @@
               {% if producto.status == "B" %} {% else %} <option value="B" > B - De Baja </option> {% endif%}
 
             </select>
-          </div>
+          </div> {% endcomment %}
         </div>
 
         <div class="col-md-2">
-          <div BIN class="col mt-3">
+
+          {% comment %} <div BIN class="col mt-3">
             <label for="bin" class="form-label">BIN</label>
             <input value='{{producto.bin}}' type="text" class="form-control" id="bin" name="bin" disabled >
-          </div>
+          </div> {% endcomment %}
+
           <div PU class="col mt-3">
             <label for="pu" class="form-label">Precio Unitario (CLP/HM)</label>
             <input value='{{producto.pu}}' type="text" class="form-control" id="pu" name="pu">
           </div>
-          <div Ubicacion class="col mt-3">
+
+          {% comment %} <div Ubicacion class="col mt-3">
             <label for="ubicación" class="form-label">Ubicación</label>
             <input value='{{producto.ubicación}}' type="text" class="form-control" id="ubicación" name="ubicación">
-          </div>
+          </div> {% endcomment %}
+
         </div>
 
         <div class="col-md-4">
@@ -95,7 +99,7 @@
               </div>
             </div>
             
-            <div class="accordion-item">
+            {% comment %} <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                   Otros Detalles
@@ -110,9 +114,9 @@
                   <input class="form-control" type="text" value='{{producto.color}}' id="color" name="color">
                 </div>
               </div>
-            </div>
+            </div> {% endcomment %}
             
-            <div class="accordion-item">
+            {% comment %} <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                   Fabricante y Proveedores
@@ -133,15 +137,16 @@
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> {% endcomment %}
 
           </div>
 
-          <div Bt Grabar class="col mt-3">
+          {% comment %} <div Bt Grabar class="col mt-3">
             <button class="btn btn-primary" type="submit"><i class="bi bi-cloud-arrow-up" title='Update Material'></i>&nbsp;&nbsp;Actualizar</i></button>
 
             <a {% if producto.dataSheet %}href="{{producto.dataSheet.url}}"{% endif %}class='btn btn-secondary' target="_blank" title='Ver Hoja de Datos y Seguridad'> Ver HDD </a>
-          </div>
+          </div> {% endcomment %}
+
         </div>
 
       </div>

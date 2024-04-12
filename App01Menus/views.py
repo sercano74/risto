@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import *
 # Create your views here.
 
-def Menu(request):
+def menu(request):
     familias = Familia.objects.all()
     productos = Producto.objects.all()
     familias_no_vacias=()
@@ -20,6 +20,6 @@ def Menu(request):
     
     return render(request,'App01Menus/Menu.html',locals())
 
-def productDetail(request,pk):
+def productdetail(request,pk):
     producto = Producto.objects.get(pk=pk)
     return render(request,'App01Menus/Detail.html',locals())
