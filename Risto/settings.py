@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # DEBUG = 'RENDER' not in os.environ
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://risto.onrender.com/']
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     print('RENDER_EXTERNAL_HOSTNAME  = ', RENDER_EXTERNAL_HOSTNAME)
