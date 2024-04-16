@@ -3,7 +3,7 @@ from .models import *
 # Create your views here.
 
 def home(request):
-     qr = Website.objects.get(pk=1)
+     qr = goo404(Website,pk=1)
      return render(request, 'home.html', locals())
 
 def menu(request):
@@ -25,6 +25,6 @@ def menu(request):
     return render(request,'Menu.html',locals())
 
 def detail(request,pk):
-    qr = Website.objects.get(pk=1)
+    qr = goo404(Website,pk=1)
     producto = Producto.objects.get(pk=pk)
     return render(request,'Detail.html',locals())
