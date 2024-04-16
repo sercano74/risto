@@ -7,22 +7,30 @@
 {% block content %}
 
 
-<div class="card">
+<div class="card ">
 
-  <div class="card-header">
-    <img src="..." class="card-img-top" alt="..."> <h2><strong>Detalle</strong></h2>
-  </div> <!-- /END Card header -->
+    <div class="card-header hstack gap-1 ">
+        <div class="col col-md-2"><img class="card-img-top img-thumbnail" src="{% static 'general/logo SUMAQ.jpg'%}" alt="Image not found" ></div>
+        <div class="vr"></div>
+        <div class="col col-md-4"><h2><strong>&nbsp;&nbsp;&nbsp;Detalle  </strong></h2></div>
+        <div class="vr"></div>
+        <div class="col col-md-1"><img src='{{qr.qr_code.url}}' width='150' height='150'></div>
+        <div class="vr"></div>
+        <div class="col col-md-1 text-center"><h4>{% now "d-m-Y" %}</h4></div>
+        <div class="vr"></div>
+        <div class="col col-md-4 text-center"><h2><a href="{% url 'menu' %}" class="btn btn-primary"><i class="bi bi-arrow-bar-left"></i>&nbsp;&nbsp;Menú</i></a></h2></div>
+    </div> <!-- /END card-header -->
 
   <div class="card-body">      
 
       <div class="row">
 
         <div class="col-sm-2">
-          <div Image class="input-group col-md-2 m-3">
+          <div Image class="input-group col-md-2">
             {% if producto.image %}
             <a href="{{producto.image.url}}" class='btn btn-secondary'>
               <div class="card" style="height:auto; width: 12rem">
-                <img class="img-thumbnail" src="{{producto.image.url}}" alt="No image" title='Ver imagen'>
+                <img class="img-thumbnail" src="{{producto.image.url}}" alt="No image" title='Ver imagen' >
               </div>
             </a>
             {% else%}

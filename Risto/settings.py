@@ -14,6 +14,7 @@ from pathlib import Path
 import environ
 import dj_database_url
 
+
 env = environ.Env()
 environ.Env.read_env()
 
@@ -27,8 +28,7 @@ print('BASE_DIR : %s' % BASE_DIR)
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-1n4*#oal)951i9o#0=1j0oq+4x8=%v3g4@*7!)!pyn3c^!^9+='
-# SECRET_KEY = os.environ.get('SECRET_KEY', default='1n4*#oal)951i9o#0=1j0oq+4x8=%v3g4@*7!)!pyn3c^!^9+=')
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY', default='1n4*#oal)951i9o#0=1j0oq+4x8=%v3g4@*7!)!pyn3c^!^9+=565677')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
@@ -43,13 +43,14 @@ if RENDER_EXTERNAL_HOSTNAME:
 # Application definition
 
 INSTALLED_APPS = [
+    'App01Menus.apps.App01MenusConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'App01Menus',
+    
 ]
 
 MIDDLEWARE = [
@@ -92,15 +93,13 @@ WSGI_APPLICATION = 'Risto.wsgi.application'
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': BASE_DIR / 'db.sqlite3',
-
-
 #     }
 # }
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost:5432/RistoDB',
-        conn_max_age=600  
+        default='postgresql://postgres:postgres@localhost/postgres',
+        conn_max_age=600
     )
 }
 

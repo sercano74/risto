@@ -35,7 +35,7 @@
 						<div class="card p-3">
 								<figure class="p-3 mb-0">
 										<blockquote class="blockquote">
-												<p>Perú</p>
+											<div class="w-50"><h2><strong>&nbsp;&nbsp;&nbsp;Menu <img src='{{qr.qr_code.url}}' width='150' height='150'> </strong></h2></div>
 										</blockquote>
 										{% comment %} {% if user.is_authenticated %}
 										{% else%}
@@ -64,7 +64,7 @@
 						<div class="card text-bg-primary text-center p-3">
 								<figure class="mb-0">
 										<blockquote class="blockquote">
-												<a class="btn btn-danger btn-block active " href="{% url 'App01Menus:menu'%}" role="button"> Ver Menu </a>
+												<a class="btn btn-danger btn-block active " href="{% url 'menu'%}" role="button"> Ver Menu </a>
 										</blockquote>
 										{% comment %} {% if user.is_authenticated %}
 												<p class="card-text"></p>

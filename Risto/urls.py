@@ -18,12 +18,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from . import views
+from .views import *
+from App01Menus.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home, name='home'),
-    path('risto/',include('App01Menus.urls', namespace='risto') )
+    path('',home, name='home'),
+    # path('risto/',include('App01Menus.urls', namespace='risto') )
+    path('menu/', menu, name='menu'),
+    path('detail/<int:pk>', detail, name='detail'),
 ]
 
 if settings.DEBUG:
