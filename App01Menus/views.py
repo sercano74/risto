@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404 as goo404
 from .models import *
 # Create your views here.
 
@@ -20,7 +20,7 @@ def menu(request):
             y.append(i.name)
 
     print('Familias ===> ', y)
-    qr = Website.objects.get(pk=1)
+    qr = goo404(Website,pk=1)
     
     return render(request,'Menu.html',locals())
 
